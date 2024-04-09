@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Summary Sidebar",
+    "description": "打开侧边栏，展示当前网页内容的OpenAI大模型总结。",
+    "version": "1.0",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "sidePanel",
+      "tabs"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "side_panel": {
+      "default_path": "sidebar.html",
+      "openPanelOnActionClick": true
+    },
+    "options_page": "options.html",
+    "action": {
+      "default_title": "Click to open Sidebar Summary"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["sidebar.html", "sidebar.js"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  
